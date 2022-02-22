@@ -1,0 +1,21 @@
+const roles = {
+    managingDirector: "Managing Director",
+    gmc: "GMC",
+    marketingExecutive: "Marketing Executive",
+    managerCommerical: "Manager Commercial",
+    commercialExecutive: "Commercial Executive",
+    asstManagerPurchase: "Asst.Manager Purchase GC",
+    managerPurchaseGC: "Manager Purchase GC",
+    managerStoresPackingAndGC: "Manager Stores Packing and GC",
+    purchaseExecutiveGC: "Purchase Executive GC",
+    asstManagerPurchaseGC: "Asst.Manager Purchase GC",
+    gcStoresExecutive: "GC Stores Executive",
+    srManager: "Sr.Manager",
+    qcManager: "QC Manager",
+    accountsExecutive: "Accounts Executive",
+    accountsManager: "Accounts Manager",
+    vendor: "Vendor",           
+    marketingRepresentative : "Marketing Representative",    
+    managerPackackingDevelopment: "Manager Packaging Development",
+}
+export default roles;
