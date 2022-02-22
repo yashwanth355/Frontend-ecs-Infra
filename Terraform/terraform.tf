@@ -16,7 +16,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-ecs-infra"
+    bucket = "frontend-ecs-infra"
     key    = "sample/terraform.tfstate"
     region = "ap-south-1"
   }

@@ -1,4 +1,4 @@
-cluster_name = "erp--api"
+cluster_name = "ui--erp"
 
 aws_region = "ap-south-1"
 
