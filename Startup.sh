@@ -1,13 +1,14 @@
 #!/bin/sh
 
 
-echo “################”
+echo "################"
+ENV=dev
 echo $ENV
-echo “################”
-Eval $(cp /app/httpd.conf_$ENV /etc/httpd/conf/httpd.conf)
-echo “################”
-Echo “RUN SERVER”
-Httpd -DFOREGROUND
-echo “################”
-Echo “######## HTTPD FG”
-~
+
+echo "################"
+eval $(cp /app/httpd-$ENV.conf /etc/httpd/conf/httpd.conf)
+echo "################"
+echo "RUN SERVER"
+httpd -DFOREGROUND
+echo "################"
+echo "######## HTTPD FG"

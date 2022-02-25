@@ -1,0 +1,34 @@
+{
+    "family": "LeapFrog-Backend-API-DEV",
+    "volumes" : [
+        {
+            "host": {
+                "sourcePath": "/prod/msp/logs"
+            },
+            "name": "logfolder"
+        }
+    
+    ],
+    "containerDefinitions": [
+        {
+            "name": "lapfrom-api",
+            "image": "%IMAGE-NAME%",
+            "cpu": 512,
+            "memory": 1024,
+            "portMapping": [
+                {
+                    "hostPort": 0,
+                    "containerPort": 3000,
+                    "pootocol": "tcp"
+                }
+            ],
+            "mountpoints": [
+                {
+                    "containerPath": "/prod/msp/logs"
+                }
+            ],
+            
+            "essential": true
+        }
+    ]
+}
