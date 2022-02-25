@@ -1,4 +1,4 @@
-FROM docker
+FROM centos/httpd-24
 
 ENV APP_DIR /app
 WORKDIR /var/www/html
