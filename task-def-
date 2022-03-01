@@ -1,6 +1,37 @@
 {
-    "family": "LeapFrog-Backend-API-DEV",
-    "volumes" : [
+    "requiresCompatibilities": [
+      "EC2"
+    ],
+    "containerDefinitions": [
+      {
+        "name": "",
+        "image": "",
+        "memory": 512,
+        "cpu": 512,
+        "essential": true,
+        "portMappings": [
+            {
+              "hostPort": 0,
+              "protocol": "tcp",
+              "containerPort": 3000
+            }
+        ],
+        "mountPoints": [
+            {
+              "sourceVolume": "logfolder",
+              "containerPath": "/prod/msp/logs"
+            }
+        ],
+        
+        "environment": [
+            {
+              "name": "APP_NAME",
+              "value": "development"
+            }
+            ]
+        }
+        ],
+    "volumes": [
         {
             "host": {
                 "sourcePath": "/prod/msp/logs"
@@ -9,26 +40,8 @@
         }
     
     ],
-    "containerDefinitions": [
-        {
-            "name": "lapfrom-api",
-            "image": "%IMAGE-NAME%",
-            "cpu": 512,
-            "memory": 1024,
-            "portMapping": [
-                {
-                    "hostPort": 0,
-                    "containerPort": 3000,
-                    "pootocol": "tcp"
-                }
-            ],
-            "mountpoints": [
-                {
-                    "containerPath": "/prod/msp/logs"
-                }
-            ],
-            
-            "essential": true
-        }
-    ]
-}
+    "networkMode": "bridge",
+    "placementConstraints": [],
+    "family": "ecs-uidev-task"
+  }
+  
