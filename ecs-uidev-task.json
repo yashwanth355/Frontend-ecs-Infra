@@ -41,7 +41,6 @@
     
     ],
     "networkMode": "bridge",
-    "placementConstraints": [],
-    "family": "ecs-uidev-task"
+    "placementConstraints": []
   }
   
