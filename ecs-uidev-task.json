@@ -13,7 +13,7 @@
             {
               "hostPort": 0,
               "protocol": "tcp",
-              "containerPort": 3000
+              "containerPort": 8080
             }
         ],
         "mountPoints": [
