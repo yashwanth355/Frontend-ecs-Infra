@@ -7,7 +7,7 @@
         }
     ],
     "desiredCount": 2,
-    "role": "ecsServiceRole",
+    "role": "ui-ecsServiceRole",
     "deploymentConfiguration": {
         "maximumPercent": 200,
         "minimumHealthyPercent": 100
