@@ -1,12 +1,13 @@
-FROM docker
+FROM centos/httpd
 
 ENV APP_DIR /app
 WORKDIR /var/www/html
 
+RUN yum -y install mod_ssl openssh
 COPY  /dist/ /var/www/html
 COPY health.json /var/www/html/health.json
-COPY /startup.sh ${APP_DIR}/bin
-COPY /httpd.conf_* /app
-RUN chmod 755 ${APP_DIR}/bin/startup.sh \
-         && chmod -R 755 /var/www/html
-CMD /bin/sh -c ${APP_DIR}/bin/startup.sh
+COPY /startup.sh /app/bin/startup.sh
+COPY /httpd-*.conf /app
+RUN chmod +x /app/bin/startup.sh
+RUN chmod -R 755 /var/www/html
+CMD /bin/sh -c /app/bin/startup.sh
